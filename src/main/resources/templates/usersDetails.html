@@ -10,9 +10,7 @@
 
 <div class="container">
 
-    <h1>Users</h1>
-
-    <button type="button" class="btn btn-primary mb-2">Create</button>
+    <h1>Users Details</h1>
 
     <table class="table">
         <thead class="thead-dark">
@@ -20,22 +18,22 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Actions</th>
+                <th>Phone Number</th>
+                <th>Address</th>
             </tr>
         </thead>
         <tbody>
-            <tr th:each="user: ${users}">
+            <tr>
                 <td th:text="${user.firstName}">User First Name</td>
                 <td th:text="${user.lastName}">User Last Name</td>
                 <td th:text="${user.email}">User Email Name</td>
-                <td>
-                    <a th:href="@{/users/{id}(id=${user.id})}" class="mr-2">View Details</a>
-                    <a href="/users/edit" class="mr-2">Edit</a>
-                    <a href="/users/delete">Delete</a>
-                </td>
+                <td th:text="${user.phoneNumber}">User Phone Number</td>
+                <td th:text="${user.address}">User Address</td>
             </tr>
         </tbody>
     </table>
+
+    <a href="/users">Back</a>
 
 
 </div>
