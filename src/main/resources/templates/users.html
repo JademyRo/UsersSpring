@@ -31,7 +31,7 @@
                 <td>
                     <a th:href="@{/users/{id}(id=${user.id})}" class="mr-2">View Details</a>
                     <a th:href="@{/users/edit/{id}(id=${user.id})}" class="mr-2">Edit</a>
-                    <a href="/users/delete">Delete</a>
+                    <a th:href="@{/users/delete/{id}(id=${user.id})}">Delete</a>
                 </td>
             </tr>
         </tbody>

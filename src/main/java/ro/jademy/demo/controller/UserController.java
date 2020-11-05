@@ -86,4 +86,12 @@ public class UserController {
 
         return "redirect:/users";
     }
+
+    @GetMapping("/users/delete/{id}")
+    public String deleteUser(@PathVariable("id") Long id) {
+
+        USERS.removeIf(user -> user.getId().equals(id));
+
+        return "redirect:/users";
+    }
 }
