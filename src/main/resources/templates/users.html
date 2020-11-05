@@ -12,7 +12,7 @@
 
     <h1>Users</h1>
 
-    <button type="button" class="btn btn-primary mb-2">Create</button>
+    <a class="btn btn-primary mb-2" th:href="@{/users/create}">Create</a>
 
     <table class="table">
         <thead class="thead-dark">
@@ -30,7 +30,7 @@
                 <td th:text="${user.email}">User Email Name</td>
                 <td>
                     <a th:href="@{/users/{id}(id=${user.id})}" class="mr-2">View Details</a>
-                    <a href="/users/edit" class="mr-2">Edit</a>
+                    <a th:href="@{/users/edit/{id}(id=${user.id})}" class="mr-2">Edit</a>
                     <a href="/users/delete">Delete</a>
                 </td>
             </tr>
